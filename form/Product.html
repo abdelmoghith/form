@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="hide.css" />
+  <link rel="stylesheet" href="all.min.css" />
+  <title>Produit</title>
+</head>
+
+<body>
+
+  <div class="form">
+    <form action="" method="post" id="deliveryForm" onsubmit="handleSubmit(event)" >
+      <input type="text" placeholder="الاسم الكامل" name="name" required oninput="validateInput()" required />
+      <input type="number" id="phoneNumber" placeholder="رقم الهاتف" name="number" pattern="^0[5-7][0-9]{8}$" maxlength="10" minlength="10" required onblur="validateInput()" />
+      <select name="wilayas" id="wilayas" onclick="updateCommunes()">
+        <option value="" hidden>الولاية</option>
+        <option value="1">أدرار</option>
+        <option value="2">الشلف</option>
+        <option value="3">الأغواط</option>
+        <option value="4">أم البواقي</option>
+        <option value="5">باتنة</option>
+        <option value="6">بجاية</option>
+        <option value="7">بسكرة</option>
+        <option value="8">بشار</option>
+        <option value="9">البليدة</option>
+        <option value="10">البويرة</option>
+        <option value="11">تمنراست</option>
+        <option value="12">تبسة</option>
+        <option value="13">تلمسان</option>
+        <option value="14">تيارت</option>
+        <option value="15">تيزي وزو</option>
+        <option value="16">الجزائر</option>
+        <option value="17">الجلفة</option>
+        <option value="18">جيجل</option>
+        <option value="19">سطيف</option>
+        <option value="20">سعيدة</option>
+        <option value="21">سكيكدة</option>
+        <option value="22">سيدي بلعباس</option>
+        <option value="23">عنابة</option>
+        <option value="24">قالمة</option>
+        <option value="25">قسنطينة</option>
+        <option value="26">المدية</option>
+        <option value="27">مستغانم</option>
+        <option value="28">المسيلة</option>
+        <option value="29">معسكر</option>
+        <option value="30">ورقلة</option>
+        <option value="31">وهران</option>
+        <option value="32">البيض</option>
+        <option value="33">إليزي</option>
+        <option value="34">برج بوعريريج</option>
+        <option value="35">بومرداس</option>
+        <option value="36">الطارف</option>
+        <option value="37">تندوف</option>
+        <option value="38">تيسمسيلت</option>
+        <option value="39">الوادي</option>
+        <option value="40">خنشلة</option>
+        <option value="41">سوق أهراس</option>
+        <option value="42">تيبازة</option>
+        <option value="43">ميلة</option>
+        <option value="44">عين الدفلى</option>
+        <option value="45">النعامة</option>
+        <option value="46">عين تيموشنت</option>
+        <option value="47">غرداية</option>
+        <option value="48">غليزان</option>
+        <option value="49">تيميمون</option>
+        <option value="51">أولاد جلال</option>
+        <option value="52">بني عباس</option>
+        <option value="53">عين صالح</option>
+        <option value="55">تقرت</option>
+        <option value="56">جانت</option>
+        <option value="57">المغير</option>
+        <option value="58">المنيعة</option>
+      </select>
+
+      <select name="commune" id="commune" required>
+        <option value="" hidden>البلدية</option>
+      </select>
+
+      <input type="text" placeholder="العنوان الكامل" name="adresse" id="adresse" required />
+      <select name="Quantite" id="Quantite" required>
+        <option value="" hidden>الكمية</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+  </div>
+  <style>
+
+    .Delevry label {
+        display: inline-block;
+        text-align: center;
+    }
+</style>
+  <div class="Delevry">
+    <p> : الى توصيل   </p>
+    <input type="radio" id="desk" name="deliveryType" value="desk" checked>
+    <label for="desk" style="margin: auto; width: 100%;"> المكتب </label>
+
+    <input type="radio" id="domicile" name="deliveryType" value="domicile">
+    <label for="domicile"> المنزل</label>
+  </div>
+
+  <div class="details">
+    <div>
+      <p id="productPrice">2000 DA</p>
+      <p>: ثمن المنتج  </p>
+        <input type="hidden" name="Prix" id="productPriceInput" value="2000">
+    </div>
+    <div>
+      <p id="livraisonPrice">...</p>
+      <p>: ثمن التوصيل</p>
+        <input type="hidden" name="Livraison" id="livraisonPriceInput" value="">
+    </div>
+    <div>
+      <p><mark id="totalAmount">0 DA</mark></p>
+      <p>: الاجمالي </p>
+        <input type="hidden" name="Total" id="TotalInput" value="">
+    </div>
+</div>
+
+
+
+  <div class="valider">
+    <button type="submit" id="valider" name="valider">شراء</button>
+  </div>
+  </form>
+</body>
+<script src="page.js"></script>
+
+</html>

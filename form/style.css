@@ -1,0 +1,460 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.form {
+  padding: 20px 100px;
+}
+form input,
+form select,
+.searsh select {
+  width: 100%;
+  margin: 10px auto;
+  text-align: end;
+  padding-right: 10px;
+  outline: none;
+  border: 1px solid #33333381;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 15px;
+}
+form select {
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+form {
+  position: relative;
+}
+#rechercher {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 70%;
+  transform: translateY(-50%);
+  width: 50px;
+  background-color: rgba(76, 0, 255, 0.511);
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  border-radius: 40%;
+}
+
+.searsh {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: fit-content;
+}
+.searsh button {
+  left: 0px;
+  position: absolute;
+  background-color: rgba(76, 0, 255, 0.511);
+  height: 70%;
+  width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-content: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pic_product {
+  text-align: end;
+}
+.pic_product h2 {
+  text-align: end;
+  color: rgba(0, 0, 0, 0.822);
+}
+
+.pic .picx {
+  margin: auto;
+  background-size: cover;
+  width: 80%;
+  height: 700px;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  background-position: center;
+}
+
+.pic {
+  background-image: url(Product.jpg);
+}
+
+.details {
+  margin: 20px auto;
+  width: 85%;
+  padding: 15px;
+  background-color: rgba(225, 212, 255, 0.372);
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.details div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.valider {
+  margin: 10px auto;
+  width: fit-content;
+}
+.valider button {
+  outline: none;
+  border: none;
+  background-color: rgba(76, 0, 255, 0.511);
+  color: white;
+  width: 150px;
+  height: 50px;
+  margin: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #33333381;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inf {
+  background-color: rgb(31, 33, 50);
+  color: white;
+  text-align: end;
+  font-size: 25px;
+  margin: 0;
+  padding: 50px;
+  font-weight: bold;
+}
+
+.photo {
+  margin-top: 20px;
+  background-size: contain;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#paiment {
+  background-image: url(cod.webp);
+}
+#livraison {
+  background-image: url(shipping-delivery-soq-dz-final.webp);
+}
+#about {
+  background-image: url(about.jpg);
+}
+#Contact {
+  background-image: url(Contact.jpg);
+}
+
+mark {
+  background-color: #4eaf52;
+  border-radius: 3px;
+  padding: 1px;
+  color: white;
+}
+
+.information {
+  text-align: end;
+  padding: 15px;
+}
+.information h4 {
+  margin: 15px auto;
+}
+
+.footer {
+  background-color: #eee;
+  padding: 20px;
+  font-size: 20px;
+  text-align: end;
+}
+
+.icons a {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.Categoryes > div {
+  background-color: #eee;
+  margin: 30px auto;
+  height: 400px;
+  width: 90%;
+  border-radius: 10px;
+  padding: 15px;
+  background-position: center;
+  background-size: cover;
+}
+.Categoryes > div p {
+  margin: 50px 0px 25px;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+
+.Buttons {
+  position: relative;
+  overflow: hidden;
+}
+.assest_1,
+.assest_2,
+.assest_3,
+.assest_4,
+.assest_5 {
+  background-size: contain;
+  width: 225px;
+  height: 150px;
+  background-repeat: no-repeat;
+  margin: 40px auto;
+  display: grid;
+  place-content: center;
+  font-weight: bolder;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.Delevry {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  text-align: end;
+}
+
+.Delevry input[type="radio"] {
+  display: none;
+}
+
+.Delevry label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  border: 2px solid #eee;
+}
+
+.Delevry label span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  border-radius: 3px; /* Making the square corners slightly rounded */
+}
+
+.Delevry input[type="radio"]:checked + label {
+  background-color: rgba(76, 0, 255, 0.511);
+  color: white;
+}
+
+.Delevry input[type="radio"]:checked + label span::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+}
+
+.Delevry label:hover {
+  background-color: #f0f8ff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.assest_1 {
+  background-image: url(1x/Asset\ 4.png);
+}
+.assest_2 {
+  background-image: url(1x/Asset\ 1.png);
+}
+.assest_3 {
+  background-image: url(1x/Asset\ 2.png);
+}
+.assest_4 {
+  background-image: url(1x/Asset\ 3.png);
+}
+.assest_5 {
+  background-image: url(1x/Asset\ 6.png);
+  width: 30px;
+  height: 70px;
+  margin-top: 100px;
+}
+
+.about_us {
+  background-color: #eeeeee70;
+  padding: 20px;
+  margin-top: 50px auto;
+}
+
+.foot_links ul {
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  margin: 10px auto;
+}
+.foot_links ul li {
+  margin: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-style: oblique;
+  text-decoration: underline;
+  color: #1c4243;
+}
+
+.disabled {
+  opacity: 0.2;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    margin: 0 auto;
+    background-position: center;
+  }
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    gap: 10px;
+    margin-top: 50px;
+  }
+
+  .products > div {
+    height: auto;
+    box-shadow: 0px 0px 10px #6666665e;
+  }
+
+  .Picture {
+    /* background-image: url(/shop/3249f090-71b1-11ed-a5f1-81abdd76c21a.webp); */
+    height: 180px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .description {
+    height: max-content;
+    text-align: end;
+    padding: 20px 5px 30px;
+  }
+
+  .form input,
+  .form select {
+    width: 100%;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid #33333381;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .Categoryes > div {
+    background-color: #eee;
+    margin: 10px auto;
+    height: 200px;
+    width: 95%;
+    border-radius: 10px;
+    padding: 15px;
+    background-position: center;
+    background-size: cover;
+  }
+  .Categoryes > div p {
+    margin: 50px 0px 25px;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+  }
+  .form {
+    padding: 10px;
+  }
+  .pic {
+    margin: auto;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    background-position: center;
+  }
+  .picx {
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+    background-size: contain;
+  }
+  .sidebar {
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    display: none;
+  }
+  .photo {
+    margin-top: 20px;
+    background-image: url(/shop/shipping-delivery-soq-dz-final.webp);
+    background-size: contain;
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 320px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+    gap: 10px;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 380px) {
+  .intro {
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    border: none;
+  }
+}
+
+
+.product_dz{
+  margin: 10px;
+  padding: 5px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #999;
+}
+.product_dz h2{
+font-weight: light;
+}
+.product_dz p{
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #259bea;
+}
